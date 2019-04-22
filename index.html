@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CatALog</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="cat-list">Adoptable Cats Near You</h2>
+      <div class="startPage">
+        <h1>Cat-a-Log</h1>
+        <h2>the cat finder app</h2>
+        <img id="catLogo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Cat_silhouette.svg/800px-Cat_silhouette.svg.png" class="banner-img" alt="silhouette of a cat"/>
+        <h3>Find adoptable cats in your area by selecting traits you want in a pet and entering your zipcode.</h3>
+        <h2 class="cat-list">adoptable cats near you</h2>
+        <p><button type="button" class="startButton"> Find cats!</button></p>
+      </div>
+      <form id="js-form">
+        <button type="button" class="traitButton">Select desired traits.</button>
+          <div class="checkboxes">
+            <input type="checkbox" class="boxes" name="trait" id="trait1" value="kid-friendly"><label for="trait1">kid-friendly</label>
+            <input type="checkbox" class="boxes" name="trait" id="trait2" value="dog-friendly"><label for="trait2">dog-friendly</label>
+            <input type="checkbox" class="boxes" name="trait" id="trait3" value="social"><label for="trait3">social</label>
+            <input type="checkbox" class="boxes" name="trait" id="trait4" value="adaptability"><label for="trait4">adaptable</label>
+            <input type="checkbox" class="boxes" name="trait" id="trait5" value="low-grooming-needs"><label for="trait5">low grooming needs</label>
+            <input type="checkbox" class="boxes" name="trait" id="trait6"  value="stranger-friendly"><label for="trait6">stranger-friendly</label>
+            <input type="checkbox" class="boxes" name="trait" id="trait7" value="energy_level"><label for="trait7">energetic</label>
+          </div>  
+        <button type="button" class="areaButton">Enter a zip code to search in.</button>
+        <input type="text" name="geo-area" placeholder="91210" id="geo-area" required>
+        <p><button type="submit" class="submitButton">Search!</button></p>
+      </form>
+      <p id="js-error-message" class="error-message"></p>
+      <div class ="results-wrapper"></div>
+        <p><button type="button" class="restartButton">Look Again?</button></p>  
+    </div>
+   <script src="script.js"></script>
+  </body>
+</html>
